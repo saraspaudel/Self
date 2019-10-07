@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
+<div class="row">
+    <div class="column" id="columnOne">
+                <img src="../../assets/GiantRobotLTD_Logo.svg" height="26px" width="177px" alt="Giant Robot" id="logo">
+                <h1>Welcome</h1>
+                <p>Please tell us a bit about yourself to get started.</p>
+    </div>
+    <div class="column" id="columnTwo">
+        <form>
+            <label for="firstName">FIRST NAME <span class="labelError" *ngIf ="firstName.touched && !firstName.valid">REQUIRED</span></label>
+            <input required ngModel #firstName="ngModel" name="firstName" type="text" id="firstName" [class.inputError]="firstName.touched && !firstName.valid" [class.activeFilled]="firstName.valid">
+
+            <label for="lastName">LAST NAME <span class="labelError" *ngIf ="lastName.touched && !lastName.valid">REQUIRED</span></label>
+            <input required ngModel #lastName="ngModel" name="lastName" type="text" id="lastName" [class.inputError]="lastName.touched && !lastName.valid" [class.activeFilled]="lastName.valid">
+
+            <label for="firstaddress">ADDRESS <span class="labelError" *ngIf ="firstaddress.touched && !firstaddress.valid">REQUIRED</span></label>
+            <input required ngModel #firstaddress="ngModel" name="firstaddress" type="text" id="firstaddress" [class.inputError]="firstaddress.touched && !firstaddress.valid" [class.activeFilled]="firstaddress.valid">
+            
+            <label for="secondaddress">ADDRESS 2 (OPTIONAL)</label>
+            <input ngModel #secondaddress="ngModel" name="secondaddress" type="text" id="secondaddress" [class.inputError]="secondaddress.touched && !secondaddress.valid" [class.activeFilled]="secondaddress.valid && secondaddress.touched">
+            <button type="submit" [disabled]="!firstName.valid && !lastName.valid && !firstaddress.valid" onClick="alert('Form Submitted')">Next <img src="../../assets/White_Arrow.svg" alt="Next" id="icon"> </button>
+        </form>
+    </div>
+</div>

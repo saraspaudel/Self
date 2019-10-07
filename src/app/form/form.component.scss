@@ -1,0 +1,108 @@
+$font-stack-a: 'Roboto:Regular', sans-serif;
+$font-stack-b: 'Roboto:Bold', sans-serif;
+$font-stack-c: 'Merriweather', serif;
+$color-a: #666666;
+$error: #E70000;
+
+* {
+    display: block;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px){
+    .row {
+        display: flex;
+        height: 100vh;
+        -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+      }
+  }
+
+label {
+    font-family: $font-stack-c;
+    color: $color-a;
+    font-size: 12px;
+}
+
+input{
+    font-family: $font-stack-a;
+    background-color: #F7F7F7;
+    border-width: 0;
+    color: $color-a;
+    font-size: 14px;
+    height: 48px;
+    width: 360px;
+    padding: 0px 0px 0px 16px;
+    box-shadow: inset 0px 0px 0px 1px #EAEAEA;
+    margin-bottom: 24px;
+}
+
+.activeFilled{
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 1px #00ADEE;
+}
+
+.inputError{
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 1px $error;
+}
+
+.labelError{
+    color: $error;
+}
+
+button {
+    background-color: #FFAB44;
+    color: white;
+    font-family: $font-stack-b;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.row {
+    display: flex;
+    height: 100vh;
+  }
+  
+.column {
+    flex: 50%;
+}
+
+#columnOne{
+    background-color: #585858;
+    padding-right: 80px;
+    padding-left:80px;
+}
+
+#columnTwo{
+    margin-left: 24px;
+    margin-top: 32px;
+}
+
+#icon {
+display: inline
+}
+
+span{
+    display: inline;
+}
+
+#logo{
+    margin-top: 32px;
+}
+
+h1{
+    color: white;
+    font-family: $font-stack-b;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+p{
+    font-family: $font-stack-c;
+    color: #EAEAEA;
+    font-size: 14px;
+    margin:0;
+}
